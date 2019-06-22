@@ -1,4 +1,4 @@
-## Version 0.0.1
+## Version 0.0.0
 
 ### Jun 20, 2019
 
@@ -6,6 +6,6 @@
     + Initial directory structure
     + Initial migration
     + Initial documentation
-    + Initial app and related api
+    + Initial app and related API
 
 [@GeekyShacklebolt]: https://github.com/GeekyShacklebolt
