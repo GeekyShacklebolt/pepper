@@ -1,4 +1,4 @@
-# User Label
+# Facebook
 
 ## Accept Facebook Page
 
@@ -37,7 +37,7 @@ Status: 201 Created
 }
 ```
 
-## Create Messenger Page
+## Create Messenger Label
 
 ```
 POST /api/label
@@ -68,7 +68,7 @@ Status: 201 Created
 {
     "owner": 7,
     "page": 3,
-    "label_name": "MyLabel"
+    "label_name": "MyLabel",
     "label_id": "298374928749922"
 }
 ```
@@ -91,7 +91,7 @@ valid_psid         | text      | false    | List of valid PSIDs
 invalid_psid       | text      | false    | List of invalid PSIDs
 label_associated_to| text      | false    | List of valid PSIDs to which messenger label successfully associated
 
-__NOTE__
+__NOTE__:
 - CSV file containing PSIDs, should have each PSID in each line standalone.
 
 **Request**
