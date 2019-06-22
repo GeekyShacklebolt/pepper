@@ -50,6 +50,9 @@ Please explore [endpoints.md](docs/endpoints.md) to understand endpoints request
 
 3. Send the list of PSIDs and a label identifier which you want to associate with them using endpoint `/api/psid`
 
+__NOTE__:
+Another version of the same API is available in branch [csv](https://github.com/GeekyShacklebolt/pepper/tree/csv) of this project that accepts PSID list from a `csv` file.
+
 ### Contributors
 
 [Shiva Saxena](https://github.com/geekyshacklebolt)

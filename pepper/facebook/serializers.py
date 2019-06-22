@@ -1,9 +1,9 @@
-# Third party stuff
+# Third party imports
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 
 
-# Relative stuff
+# Relative imports
 from . import models
 from . import services
 
