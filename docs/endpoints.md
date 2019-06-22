@@ -86,20 +86,20 @@ Name               | Data type | Required | Description
 id                 | integer   | true     | Unique ID for PSID list object
 page               | integer   | true     | Foreign key to FacebookPage model
 label              | integer   | true     | Foreign key to MessengerLabel model
-psid_list          | text      | true     | List of PSIDs
+psid_list          | file      | true     | CSV file contiaing PSIDs
 valid_psid         | text      | false    | List of valid PSIDs
 invalid_psid       | text      | false    | List of invalid PSIDs
 label_associated_to| text      | false    | List of valid PSIDs to which messenger label successfully associated
 
 __NOTE__
-- psid_list: List items are entered comma separated
+- CSV file containing PSIDs, should have each PSID in each line standalone.
 
 **Request**
 ```json
 {
     "page": "7",
     "label": "3",
-    "psid_list": "12342342342422, 2897839920287684, 928374928374234, 2724188550943785"
+    "psid_list": '/path/to/file/filename.csv'
 }
 ```
 

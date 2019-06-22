@@ -28,7 +28,26 @@ def fetch_label_id(label_name, page):
         raise Exception("Invalid access token or label name!")
 
 
-def fetch_users(**validated_data):
+def parse_csv(psid_csv_file):
+    """Service to parse CSV file to get PSIDs.
+
+    :param psid_csv_file: CSV file instance upload by the user.
+
+    :returns: String of joined PSIDs
+
+    """
+    psid_csv_file.open('r')
+    file = psid_csv_file.readlines()
+    data = []
+    for each_line in file:
+        each_line = str(each_line)
+        each_line = each_line.strip('b\'')
+        each_line = each_line.strip('\\n\'')
+        data.append(str(each_line))
+    return (', ').join(data)
+
+
+def fetch_users(psid, **validated_data):
     """Service to fetch users' profile using messenger PSID.
 
     :param validated_data: Serialized data from PSIDListSerializer.
@@ -38,7 +57,7 @@ def fetch_users(**validated_data):
     """
     url = 'https://graph.facebook.com'
     batch_data = ''
-    psid_list = validated_data['psid_list'].split(', ')
+    psid_list = psid.split(', ')
     page_access_token = getattr(validated_data['page'], 'access_token')
 
     for psid in psid_list:

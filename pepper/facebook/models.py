@@ -38,7 +38,7 @@ class MessengerLabel(models.Model):
 class PSIDList(models.Model):
     page = models.ForeignKey(FacebookPage, on_delete=models.CASCADE, verbose_name=_('Facebook Page'))
     label = models.ForeignKey(MessengerLabel, on_delete=models.CASCADE, verbose_name=_('Messenger Label'))
-    psid_list = models.TextField(verbose_name=_('PSID List'), null=False, blank=False)
+    psid_list = models.FileField(verbose_name=_('PSID List'), upload_to='./debug', null=False, blank=False)
     valid_psid = models.TextField(verbose_name=_('Valid PSID List'), null=True, blank=True, default=None)
     invalid_psid = models.TextField(verbose_name=_('Invalid PSID List'), null=True, blank=True, default=None)
     label_associated_to = models.TextField(verbose_name=_('Label Associated To'), null=True, blank=True, default=None)

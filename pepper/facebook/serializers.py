@@ -43,8 +43,9 @@ class MessengerLabelSerializer(serializers.ModelSerializer):
 
 class PSIDListSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
-        services.check_batch_limit(validated_data['psid_list'])
-        validated_data = services.fetch_users(**validated_data)
+        psid_list = services.parse_csv(validated_data['psid_list'])
+        services.check_batch_limit(psid_list)
+        validated_data = services.fetch_users(psid_list, **validated_data)
         validated_data = services.associate_label(**validated_data)
         return models.PSIDList.objects.create(**validated_data)
 
