@@ -4,24 +4,12 @@ requests==2.22.0
 
 # Core Stuff
 # -------------------------------------
-Django==1.11.6
+Django==2.2.3
 
 # Configuration
 # -------------------------------------
-django-environ==0.4.4
+django-environ==0.4.5
 
 # REST APIs
 # -------------------------------------
-djangorestframework==3.9.4
-
-# Extensions
-# -------------------------------------
-pytz==2019.1
-
-# Default Environment
-# -------------------------------------
-idna==2.8
-six==1.12.0
-urllib3==1.25.3
-certifi==2018.8.24
-chardet==3.0.4
+djangorestframework==3.10.1
