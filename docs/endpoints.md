@@ -19,7 +19,7 @@ access_token       | text      | true     | Access token of facebook page
 **Request**
 ```json
 {
-    "owner": "Joel",
+    "owner": 7,
     "page_name": "MyPage",
     "page_id": "329429292932042",
     "access_token": "alkKJLslfiskIEHikfOOfiffskjosflsjSSFdfsfjsbaeqoialiwqefq"
@@ -56,8 +56,8 @@ label_id           | text      | true     | Id of messenger label
 **Request**
 ```json
 {
-    "owner": "Joel",
-    "page": "MyPage",
+    "owner": 7,
+    "page": 3,
     "label_name": "MyLabel"
 }
 ```
@@ -97,8 +97,8 @@ __NOTE__:
 **Request**
 ```json
 {
-    "page": "7",
-    "label": "3",
+    "page": 7,
+    "label": 3,
     "psid_list": "12342342342422, 2897839920287684, 928374928374234, 2724188550943785"
 }
 ```

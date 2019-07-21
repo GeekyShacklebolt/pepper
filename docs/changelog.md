@@ -1,4 +1,16 @@
-## Version 0.0.0
+## Current Version 1.0.0
+
+### July 21, 2019
+- Released version 1.0.0 ([@GeekyShacklebolt])
+    + Add testing configurations
+    + Add all test cases
+    + Update common requirements
+    + Add development requirements
+    + Fix default_router registration deprecation warning of using 'base_name'
+    + Fix endpoints requests bodies
+    + Update README.md
+    + Integrated codecov
+    + Improved directory structure by putting settings at root
 
 ### Jun 20, 2019
 
