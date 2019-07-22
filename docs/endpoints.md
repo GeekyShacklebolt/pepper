@@ -13,7 +13,7 @@ Name               | Data type | Required | Description
 id                 | integer   | true     | Unique ID for the facebook page
 owner              | integer   | true     | Foreign key to User model
 page_name          | text      | true     | Name of facebook page
-page_id            | text      | true     | Id of facebook page
+page_id            | text      | true     | ID of facebook page
 access_token       | text      | true     | Access token of facebook page
 
 **Request**
@@ -51,7 +51,7 @@ id                 | integer   | true     | Unique ID for messenger label
 owner              | integer   | true     | Foreign key to User model
 page               | integer   | true     | Foreign key to FacebookPage model
 label_name         | text      | true     | Access token of facebook page
-label_id           | text      | true     | Id of messenger label
+label_id           | text      | true     | ID of messenger label
 
 **Request**
 ```json

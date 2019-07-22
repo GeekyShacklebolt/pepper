@@ -4,13 +4,13 @@
 
 An API to fetch profiles of facebook users using their PSID and associating messenger labels to them.
 
-### Pre-requisites
+### Prerequisite
 
 * A facebook page (for utilizing messenger)
 * A facebook app (to implement pepper API)
 * A webhook setup (to get users PSIDs)
 
-You may refer this [guide](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start) to complete pre-requisites.
+You may refer this [guide](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start) to complete prerequisite.
 
 ### Now get the pepper
 
@@ -36,21 +36,21 @@ Please have a look at [.env.sample](./.env.sample), copy its content to `.env` f
 * `python manage.py run`
 
 __NOTE__:
-* You'll need to create a superuser to access API endpoints.
+You'll need to create a superuser to access API endpoints.
 
 Creating a superuser is just one command
 
-* `python manage.py superuser --username example_name --email example_email`
+* `python manage.py createsuperuser --username example_name --email example_email`
 
 ### Basic usage
 
-Please explore [endpoints.md](docs/endpoints.md) to understand endpoints request/responses.
+Please explore [endpoints.md](docs/endpoints.md) to understand valid endpoints with their corresponding requests and responses.
 
-1. Once you create the page on facebook and get its `access_token` and `page_id`, then go the endpoint `/api/page` and feed your facebook page credentials
+1. Once you create the page on facebook and get its `access_token` and `page_id`, then go to the endpoint `/api/page` in pepper and feed your facebook page credentials.
 
-2. Then create a messenger label by accessing the endpoint `/api/label`
+2. Then create a messenger label by using the endpoint `/api/label`.
 
-3. Send the list of PSIDs and a label identifier (which you want to associate with them) using endpoint `/api/psid`
+3. Now, send the list of PSIDs and a label identifier (which you want to associate with them) using the endpoint `/api/psid`.
 
 __NOTE__:
 An older version of the same API is available in branch [csv](https://github.com/GeekyShacklebolt/pepper/tree/csv) of this project that accepts PSID list from a `csv` file.

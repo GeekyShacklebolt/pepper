@@ -1,7 +1,7 @@
 ## Current Version 1.0.0
 
-### July 21, 2019
-- Released version 1.0.0 ([@GeekyShacklebolt])
+### Jul 21, 2019 (v1.0.0)
+- Release version 1.0.0 ([@GeekyShacklebolt])
     + Add testing configurations
     + Add all test cases
     + Update common requirements
