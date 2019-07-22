@@ -2,7 +2,7 @@
 import requests
 
 # Pepper imports
-from pepper import settings
+import settings
 
 
 def fetch_label_id(label_name, page):
@@ -108,7 +108,7 @@ def check_batch_limit(psid_list):
 
     """
     psid_count = len(psid_list.split(', '))
-    psid_limit = settings.FB_BATCH_REQUEST['limit']
+    psid_limit = settings.common.FB_BATCH_REQUEST['limit']
     if psid_count > int(psid_limit):
         raise Exception(
             "Facebook batch request limit exceeded. Allowed {0}, received {1}".format(psid_limit, psid_count)

@@ -1,14 +1,25 @@
 language: python
 sudo: false
 python:
-  - '3.6.5'
+  - '3.7.3'
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
 
 install:
-  - pip install -r requirements/common.txt
-  - pip install flake8
+  - pip install -r requirements/development.txt
+  - pip install codecov
 
 script:
   - flake8
+  - pytest --cov -v --tb=native
+
+after_success:
+  - codecov
 
 notifications:
   email:

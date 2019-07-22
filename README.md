@@ -1,8 +1,8 @@
 # Pepper
-![](https://travis-ci.org/GeekyShacklebolt/pepper.svg?branch=master)
+[![Build Status](https://travis-ci.org/geekyshacklebolt/pepper.svg?branch=master)](https://travis-ci.org/geekyshacklebolt/pepper)
+[![codecov](https://codecov.io/gh/geekyshacklebolt/pepper/branch/master/graph/badge.svg)](https://codecov.io/gh/geekyshacklebolt/pepper)
 
-
-An API to fetch profiles of facebook users using PSID and associating messenger labels to them.
+An API to fetch profiles of facebook users using their PSID and associating messenger labels to them.
 
 ### Pre-requisites
 
@@ -10,13 +10,15 @@ An API to fetch profiles of facebook users using PSID and associating messenger 
 * A facebook app (to implement pepper API)
 * A webhook setup (to get users PSIDs)
 
-### Get the pepper
+You may refer this [guide](https://developers.facebook.com/docs/messenger-platform/getting-started/quick-start) to complete pre-requisites.
+
+### Now get the pepper
 
 * `git clone https://github.com/geekyshacklebolt/pepper.git`
 * `cd pepper`
-* `conda create -n pepper python==3.5.6 pip`
+* `conda create -n pepper python==3.7.3 pip`
 * `conda activate pepper`
-* `pip install -r requirements/common.txt`
+* `pip install -r requirements/development.txt`
 
 __NOTE__:
 You are free to use any suitable tool for python virtual environment.
@@ -44,17 +46,15 @@ Creating a superuser is just one command
 
 Please explore [endpoints.md](docs/endpoints.md) to understand endpoints request/responses.
 
-1. Once you create the page on facebook and get its `access_token` and `page_id`. Access endpoint `/api/page` and feed your facebook page credentials
+1. Once you create the page on facebook and get its `access_token` and `page_id`, then go the endpoint `/api/page` and feed your facebook page credentials
 
 2. Then create a messenger label by accessing the endpoint `/api/label`
 
-3. Send the list of PSIDs and a label identifier which you want to associate with them using endpoint `/api/psid`
+3. Send the list of PSIDs and a label identifier (which you want to associate with them) using endpoint `/api/psid`
 
 __NOTE__:
-Another version of the same API is available in branch [csv](https://github.com/GeekyShacklebolt/pepper/tree/csv) of this project that accepts PSID list from a `csv` file.
+An older version of the same API is available in branch [csv](https://github.com/GeekyShacklebolt/pepper/tree/csv) of this project that accepts PSID list from a `csv` file.
 
 ### Contributors
 
 [Shiva Saxena](https://github.com/geekyshacklebolt)
-
-

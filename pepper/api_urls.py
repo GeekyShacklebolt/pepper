@@ -7,8 +7,8 @@ from pepper.facebook.api import PSIDListViewSet, FacebookPageViewSet, MessengerL
 default_router = DefaultRouter(trailing_slash=False)
 
 # Register all the django rest framework viewsets below.
-default_router.register('psid', PSIDListViewSet, base_name='PSIDListViewSet')
-default_router.register('page', FacebookPageViewSet, base_name='FacebookPageViewSet')
-default_router.register('label', MessengerLabelViewSet, base_name='MessengerLabelViewSet')
+default_router.register('psid', PSIDListViewSet, basename='PSIDListViewSet')
+default_router.register('page', FacebookPageViewSet, basename='FacebookPageViewSet')
+default_router.register('label', MessengerLabelViewSet, basename='MessengerLabelViewSet')
 
 urlpatterns = default_router.urls
