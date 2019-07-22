@@ -6,9 +6,6 @@ from unittest import mock
 import pytest
 from tests import factories as f
 
-# pepper imports
-import settings
-
 pytestmark = pytest.mark.django_db
 
 
@@ -72,7 +69,7 @@ def test_create_messenger_label(mock_requests_post, client):
     assert response_json['owner'] == user.id
     assert response_json['page'] == page.id
     assert response_json['label_name'] == label['label_name']
-    assert response_json['label_id'] is '1234567890'
+    assert response_json['label_id'] == '1234567890'
 
     # Test unsuccessful label creation
     fake_facebook_response_object.__str__.return_value = '<Response [400]>'

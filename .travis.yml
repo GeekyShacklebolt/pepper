@@ -11,7 +11,7 @@ before_cache:
   - rm -f $HOME/.cache/pip/log/debug.log
 
 install:
-  - pip install -r requirements/common.txt
+  - pip install -r requirements/development.txt
   - pip install codecov
 
 script:

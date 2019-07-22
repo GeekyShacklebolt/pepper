@@ -1,10 +1,6 @@
 # Pepper
-.. image:: https://travis-ci.org/GeekyShacklebolt/pepper.svg?branch=master
-     :target: https://travis-ci.org/GeekyShacklbolt/pepper
-     :alt: Continuous Integration with Travis-CI
-.. image:: https://codecov.io/gh/GeekyShacklebolt/pepper/branch/master/graph/badge.svg
-     :target: https://codecov.io/gh/GeekyShacklebolt/pepper
-     :alt: Code Coverage with Codecov
+[![Build Status](https://travis-ci.org/geekyshacklebolt/pepper.svg?branch=master)](https://travis-ci.org/geekyshacklebolt/pepper)
+[![codecov](https://codecov.io/gh/geekyshacklebolt/pepper/branch/master/graph/badge.svg)](https://codecov.io/gh/geekyshacklebolt/pepper)
 
 An API to fetch profiles of facebook users using their PSID and associating messenger labels to them.
 

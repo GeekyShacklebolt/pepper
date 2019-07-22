@@ -29,6 +29,7 @@ class TestMessengerLabelModel(TestCase):
     def setUp(self):
         self.user = f.create_user(username='test_user', email='test@example.com', password='safestpassword')
         self.page = f.create_facebook_page(owner=self.user, page_name='test_page')
+
     def test_create_messenger_label(self):
         label = {
             "owner": self.user,
